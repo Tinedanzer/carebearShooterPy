@@ -1,4 +1,7 @@
 import os
+# os.environ["SDL_VIDEODRIVER"]= "dummy"
+# os.environ['SDL_VIDEODRIVER']='windib'
+# os.environ["SDL_VIDEODRIVER"] = "directfb"
 import random
 import time
 import pygame
@@ -39,7 +42,7 @@ def main():
 
     def update_window():
         win.blit(background, (0,0))
-        #drawing text, rgb 255 max
+        #drawing text, rgb 255 max ; format for .render is(text,antialias(1 default), color)
         life_label = main_font.render(f'Lives Left: {life}',1,(255,100,0))
         level = main_font.render(f'Level: {game_level}',1,(255,100,0))
 
